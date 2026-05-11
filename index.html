@@ -28,13 +28,17 @@
         </div>
 
         <!-- Right: Nav Links (desktop) -->
-        <div class="hidden lg:flex items-center gap-8 ml-auto">
+        <div class="hidden lg:flex items-center gap-6 ml-auto">
           <a href="#home" class="text-xs font-bold tracking-widest text-yellow-500 transition-colors" data-i18n="nav.home">HOME</a>
           <a href="#about" class="text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors" data-i18n="nav.about">ABOUT</a>
           <a href="#service" class="text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors" data-i18n="nav.service">SERVICE</a>
           <a href="#gallery" class="text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors" data-i18n="nav.gallery">GALLERY</a>
           <a href="#review" class="text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors" data-i18n="nav.review">REVIEW</a>
           <a href="#contact" class="text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors" data-i18n="nav.contact">CONTACT</a>
+          <button id="lang-toggle" class="bg-yellow-500 hover:bg-yellow-400 text-black font-bold text-xs px-3 py-1.5 rounded-full transition shadow-md flex items-center gap-1">
+            <span id="lang-label">EN</span>
+            <i class="fas fa-globe text-xs"></i>
+          </button>
         </div>
 
         <!-- Mobile menu toggle -->
@@ -52,6 +56,10 @@
         <a href="#gallery" class="block text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors" data-i18n="nav.gallery">GALLERY</a>
         <a href="#review" class="block text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors" data-i18n="nav.review">REVIEW</a>
         <a href="#contact" class="block text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors" data-i18n="nav.contact">CONTACT</a>
+        <button id="lang-toggle-mobile" class="bg-yellow-500 hover:bg-yellow-400 text-black font-bold text-xs px-3 py-1.5 rounded-full transition shadow-md flex items-center gap-1">
+          <span id="lang-label-mobile">EN</span>
+          <i class="fas fa-globe text-xs"></i>
+        </button>
       </div>
     </div>
   </nav>
@@ -72,11 +80,7 @@
           </p>
         </div>
         <!-- Right Column -->
-        <div class="flex justify-center relative">
-          <button id="lang-toggle" class="absolute top-4 right-4 z-20 bg-yellow-500 hover:bg-yellow-400 text-black font-bold text-xs px-3 py-1.5 rounded-full transition shadow-md flex items-center gap-1">
-            <span id="lang-label">EN</span>
-            <i class="fas fa-globe text-xs"></i>
-          </button>
+        <div class="flex justify-center">
           <img src="images/HeroSate2.png" alt="Hero Sate" class="w-full h-auto" />
         </div>
       </div>
@@ -532,7 +536,8 @@
         }
       });
       document.documentElement.lang = lang;
-      document.getElementById('lang-label').textContent = lang === 'ms' ? 'EN' : 'BM';
+      var labels = document.querySelectorAll('#lang-label, #lang-label-mobile');
+      labels.forEach(function(l) { l.textContent = lang === 'ms' ? 'EN' : 'BM'; });
       localStorage.setItem('sate-lang', lang);
     }
 
@@ -546,10 +551,12 @@
       }
 
       var saved = localStorage.getItem('sate-lang') || 'ms';
-      document.getElementById('lang-toggle').addEventListener('click', function() {
+      function toggleLang() {
         var cur = document.documentElement.lang || 'ms';
         setLang(cur === 'ms' ? 'en' : 'ms');
-      });
+      }
+      var toggleBtns = document.querySelectorAll('#lang-toggle, #lang-toggle-mobile');
+      toggleBtns.forEach(function(b) { b.addEventListener('click', toggleLang); });
       setLang(saved);
     });
   </script>
