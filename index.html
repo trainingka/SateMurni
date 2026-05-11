@@ -180,12 +180,8 @@
   <section id="service" class="py-16 lg:py-24 bg-black">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        <!-- Left Image -->
-        <div class="flex justify-center">
-          <img src="images/SateMenu.png" alt="Menu Sate Murni" class="w-full max-w-sm rounded-2xl shadow-2xl shadow-yellow-500/10 border border-yellow-500/20" />
-        </div>
-        <!-- Right Content -->
-        <div class="w-full lg:w-1/2 flex flex-col justify-center">
+        <!-- Right Content (first in HTML for mobile) -->
+        <div class="w-full lg:w-1/2 flex flex-col justify-center lg:order-2">
             <h2 class="text-4xl font-bold text-yellow-500 mb-8 font-serif uppercase tracking-wider border-b border-gray-800 pb-4 text-center">Menu Utama</h2>
             
             <div class="grid grid-cols-3 gap-3">
@@ -206,6 +202,10 @@
                     <p class="text-yellow-500 text-xs italic mt-1">Disediakan Bersama</p>
                 </div>
             </div>
+        </div>
+        <!-- Left Image (second in HTML for mobile) -->
+        <div class="flex justify-center lg:order-1">
+          <img src="images/SateMenu.png" alt="Menu Sate Murni" class="w-full max-w-sm rounded-2xl shadow-2xl shadow-yellow-500/10 border border-yellow-500/20" />
         </div>
       </div>
     </div>
