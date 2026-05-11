@@ -15,75 +15,93 @@
 </head>
 <body class="bg-black text-white">
   <!-- ========== NAVBAR ========== -->
-  <nav class="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-yellow-500/20">
+  <nav class="sticky top-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-sm border-b border-gray-800 py-3">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16 lg:h-20">
-        <!-- Left: Logo -->
-        <div class="flex-shrink-0">
-          <span class="font-serif text-xl lg:text-2xl text-yellow-400 tracking-wide cursor-default">SATE MURNI</span>
+      <div class="flex items-center justify-between">
+        <!-- Left: Brand Identity -->
+        <div class="flex items-center gap-3">
+          <img src="images/Logo.png" alt="Sate Murni Logo" class="w-16 h-16 rounded-full object-cover border-2 border-yellow-500 bg-white" />
+          <div class="flex flex-col">
+            <div class="flex items-baseline gap-2">
+              <span class="text-2xl font-bold text-white uppercase">SATE MURNI</span>
+              <span class="text-xs text-gray-400">TAMAN DESA (JM095577-K)</span>
+            </div>
+            <span class="text-yellow-500 italic text-sm font-serif">Rasa Sate Sebenar</span>
+          </div>
         </div>
 
-        <!-- Right: Nav Links (desktop) -->
-        <div class="hidden lg:flex items-center space-x-8 ml-auto">
-          <a href="#home" class="text-sm font-medium text-white hover:text-yellow-400 transition-colors">HOME</a>
-          <a href="#about" class="text-sm font-medium text-gray-300 hover:text-yellow-400 transition-colors">ABOUT</a>
-          <a href="#service" class="text-sm font-medium text-gray-300 hover:text-yellow-400 transition-colors">SERVICE</a>
-          <a href="#gallery" class="text-sm font-medium text-gray-300 hover:text-yellow-400 transition-colors">GALLERY</a>
-          <a href="#review" class="text-sm font-medium text-gray-300 hover:text-yellow-400 transition-colors">REVIEW</a>
-          <a href="#contact" class="text-sm font-medium text-gray-300 hover:text-yellow-400 transition-colors">CONTACT</a>
+        <!-- Center: Nav Links (desktop) -->
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#home" class="text-xs font-bold tracking-widest text-yellow-500 transition-colors">HOME</a>
+          <a href="#about" class="text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors">ABOUT</a>
+          <a href="#service" class="text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors">SERVICE</a>
+          <a href="#gallery" class="text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors">GALLERY</a>
+          <a href="#review" class="text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors">REVIEW</a>
+          <a href="#contact" class="text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors">CONTACT</a>
+        </div>
+
+        <!-- Right: WhatsApp Button -->
+        <div class="hidden lg:flex flex-col items-end">
+          <a href="#" class="border border-yellow-500 text-yellow-500 px-4 py-1.5 rounded-full text-sm font-bold flex items-center gap-2 hover:bg-yellow-500/10 transition">
+            <i class="fab fa-whatsapp text-lg"></i> 012-387 3126
+          </a>
+          <span class="text-[9px] text-white text-right mt-1">WHATSAPP SEKARANG</span>
         </div>
 
         <!-- Mobile menu toggle -->
-        <button id="mobile-menu-btn" class="lg:hidden text-gray-300 hover:text-yellow-400 transition-colors">
+        <button id="mobile-menu-btn" class="lg:hidden text-gray-300 hover:text-yellow-500 transition-colors">
           <i class="fas fa-bars text-xl"></i>
         </button>
       </div>
     </div>
     <!-- Mobile Nav -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-black/95 border-t border-yellow-500/10">
+    <div id="mobile-menu" class="hidden lg:hidden bg-[#0a0a0a]/95 border-t border-gray-800">
       <div class="px-4 py-4 space-y-3">
-        <a href="#home" class="block text-sm font-medium text-white hover:text-yellow-400 transition-colors">HOME</a>
-        <a href="#about" class="block text-sm font-medium text-gray-300 hover:text-yellow-400 transition-colors">ABOUT</a>
-        <a href="#service" class="block text-sm font-medium text-gray-300 hover:text-yellow-400 transition-colors">SERVICE</a>
-        <a href="#gallery" class="block text-sm font-medium text-gray-300 hover:text-yellow-400 transition-colors">GALLERY</a>
-        <a href="#review" class="block text-sm font-medium text-gray-300 hover:text-yellow-400 transition-colors">REVIEW</a>
-        <a href="#contact" class="block text-sm font-medium text-gray-300 hover:text-yellow-400 transition-colors">CONTACT</a>
+        <a href="#home" class="block text-xs font-bold tracking-widest text-yellow-500 transition-colors">HOME</a>
+        <a href="#about" class="block text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors">ABOUT</a>
+        <a href="#service" class="block text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors">SERVICE</a>
+        <a href="#gallery" class="block text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors">GALLERY</a>
+        <a href="#review" class="block text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors">REVIEW</a>
+        <a href="#contact" class="block text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors">CONTACT</a>
+        <div class="pt-2 border-t border-gray-800">
+          <a href="#" class="inline-flex items-center gap-2 border border-yellow-500 text-yellow-500 px-4 py-1.5 rounded-full text-sm font-bold hover:bg-yellow-500/10 transition">
+            <i class="fab fa-whatsapp text-lg"></i> 012-387 3126
+          </a>
+        </div>
       </div>
     </div>
   </nav>
 
   <!-- ========== HERO SECTION ========== -->
   <section id="home" class="relative overflow-hidden bg-black">
-    
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-24 relative z-10">
-      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-        <!-- Left Column -->
-        <div class="space-y-6 lg:space-y-8 text-center lg:text-left">
-          <div class="inline-flex items-center gap-2 bg-yellow-500/10 text-yellow-400 text-xs sm:text-sm font-medium px-4 py-1.5 rounded-full border border-yellow-500/30">
-            <i class="fas fa-check-circle"></i>
-            <span>(Halal Logo MS 1500:2019) Sejak Dulu, Kekal Di Hati</span>
-          </div>
-          <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-white">
-            SATE MURNI<br />
-            <span class="text-yellow-400">TAMAN DESA</span>
-          </h1>
-          <p class="text-yellow-400 italic text-lg sm:text-xl font-serif">"Rasa Sate Sebenar"</p>
-          <p class="text-gray-400 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
-            Sate pilihan dengan rasa asli, diperap sempurna dan dibakar dengan penuh kasih sayang.
-          </p>
-          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-            <a href="https://wa.me/60123873126" target="_blank" class="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-7 py-3.5 rounded-xl transition-all shadow-lg shadow-yellow-500/25">
-              <i class="fab fa-whatsapp"></i> WHATSAPP SEKARANG
-            </a>
-            <a href="#service" class="inline-flex items-center gap-2 border border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black font-semibold px-7 py-3.5 rounded-xl transition-all">
-              <i class="fas fa-utensils"></i> LIHAT PAKEJ CATERING
-            </a>
-          </div>
+    <div class="grid md:grid-cols-2 items-center min-h-[600px]">
+      <!-- Left Column: Text & Buttons -->
+      <div class="px-8 md:pl-16 py-12 md:py-0 z-10 relative">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-10 h-10 rounded-full border border-white flex items-center justify-center text-white text-sm font-bold">حلال</span>
+          <span class="text-xs text-white font-medium">MS 1500:2019</span>
+          <span class="text-yellow-500 italic font-serif text-lg">Sejak Dulu, Kekal Di Hati</span>
         </div>
-        <!-- Right Column -->
-        <div class="flex justify-center">
-          <img src="images/HeroSate2.png" alt="Hero Sate" class="w-full h-auto" />
+        <h1 class="text-white text-5xl md:text-7xl font-bold font-serif uppercase leading-tight mt-4">
+          SATE MURNI <br /> TAMAN DESA
+        </h1>
+        <p class="text-yellow-500 text-3xl md:text-4xl font-serif italic mt-2 mb-6">Rasa Sate Sebenar</p>
+        <p class="text-gray-300 text-lg max-w-md mb-8 leading-relaxed">
+          Sate pilihan dengan rasa asli, diperap sempurna dan dibakar dengan penuh kasih sayang.
+        </p>
+        <div class="flex flex-col sm:flex-row items-start gap-4">
+          <button class="bg-yellow-500 text-black font-bold px-6 py-3 rounded flex items-center gap-2 hover:bg-yellow-400 transition">
+            <i class="fab fa-whatsapp text-xl"></i> WHATSAPP SEKARANG
+          </button>
+          <button class="border border-yellow-500 text-yellow-500 font-bold px-6 py-3 rounded hover:bg-yellow-500/10 transition">
+            LIHAT PAKEJ CATERING
+          </button>
         </div>
+      </div>
+      <!-- Right Column: Image -->
+      <div class="relative h-full">
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent md:relative md:bg-none z-10"></div>
+        <img src="images/HeroSate2.png" alt="Sate Murni" class="w-full h-[500px] md:h-[700px] object-cover object-right relative z-0" />
       </div>
     </div>
   </section>
