@@ -109,30 +109,29 @@
 
       <!-- Unified Management Card -->
       <div class="max-w-5xl mx-auto bg-[#1a1a1a] rounded-xl border border-yellow-500/30 p-8 shadow-[0_0_15px_rgba(234,179,8,0.05)] flex flex-col items-center gap-10 md:p-12">
-        <!-- PART A: Profile Stack -->
-        <div class="flex flex-col items-center gap-10 w-full">
-          <!-- Profile 1: Founder -->
-          <div class="flex flex-col items-center gap-3">
-            <img src="images/Founder2.jpg" alt="Founder Sate Murni" class="w-24 h-24 min-w-[6rem] rounded-full object-cover object-center shrink-0 border-2 border-yellow-500 shadow-md">
-            <div class="text-center">
-              <h3 class="text-xl font-bold text-white">Rico Herman</h3>
-              <p class="text-yellow-500 text-sm mb-2">Pengasas Sate Murni</p>
-              <ul class="text-xs text-gray-400 space-y-1">
-                <li class="flex items-center justify-center gap-2"><i class="fas fa-check-circle text-yellow-500 w-3"></i> 30 Years in Hotel Industry</li>
-                <li class="flex items-center justify-center gap-2"><i class="fas fa-check-circle text-yellow-500 w-3"></i> DHM Mahtec - Shatec</li>
-                <li class="flex items-center justify-center gap-2"><i class="fas fa-check-circle text-yellow-500 w-3"></i> PIND - Pakar Industry (Front Office)</li>
-              </ul>
+        <!-- PART A: Profiles Row -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 pt-4 items-start">
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
+                <img src="images/Founder.jpg" alt="Founder Sate Murni" class="w-24 h-24 min-w-[6rem] rounded-full object-cover object-top shrink-0 border-2 border-yellow-500 shadow-md">
+                <div class="flex flex-col items-center md:items-start w-full">
+                    <h3 class="text-xl font-bold text-white">Rico Herman</h3>
+                    <p class="text-yellow-500 text-sm mb-3">Pengasas Sate Murni</p>
+                    <ul class="text-xs text-gray-400 space-y-1.5 flex flex-col items-center md:items-start w-full">
+                        <li class="flex items-center gap-2 justify-center md:justify-start"><i class="fas fa-check-circle text-yellow-500 w-3"></i> <span>30 Years in Hotel Industry</span></li>
+                        <li class="flex items-center gap-2 justify-center md:justify-start"><i class="fas fa-check-circle text-yellow-500 w-3"></i> <span>DHM Mahtec - Shatec</span></li>
+                        <li class="flex items-center gap-2 justify-center md:justify-start"><i class="fas fa-check-circle text-yellow-500 w-3"></i> <span>PIND - Pakar Industry (Front Office)</span></li>
+                    </ul>
+                </div>
             </div>
-          </div>
-          <!-- Profile 2: Director -->
-          <div class="flex flex-col items-center gap-3">
-            <img src="images/Director2.png" alt="Director" class="w-24 h-24 rounded-full border-2 border-yellow-500 object-cover shrink-0" />
-            <div class="text-center">
-              <h3 class="text-xl text-white font-bold">Lt Muda PA Nurul Amisha Rico</h3>
-              <p class="text-yellow-500 text-sm mb-2">Director Sate Murni</p>
-              <p class="text-gray-400 text-xs">BSc in Statistics with Honors (UKM)</p>
+
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
+                <img src="images/Director.jpeg" alt="Director Sate Murni" class="w-24 h-24 min-w-[6rem] rounded-full object-cover object-top shrink-0 border-2 border-yellow-500 shadow-md">
+                <div class="flex flex-col items-center md:items-start w-full">
+                    <h3 class="text-xl font-bold text-white">Lt Muda PA Nurul Amisha Rico</h3>
+                    <p class="text-yellow-500 text-sm mb-3">Director Sate Murni</p>
+                    <p class="text-xs text-gray-400">BSc in Statistics with Honors (UKM)</p>
+                </div>
             </div>
-          </div>
         </div>
 
         <!-- PART B: Divider -->
