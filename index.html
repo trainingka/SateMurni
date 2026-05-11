@@ -97,7 +97,7 @@
   </section>
 
   <!-- ========== ABOUT US SECTION ========== -->
-  <section id="about" class="py-16 lg:py-24" style="background-color: #111;">
+  <section id="about" style="background-color: #111;" class="py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
       <div class="flex items-center justify-center gap-4 mb-12 lg:mb-16">
@@ -106,57 +106,51 @@
         <div class="h-px w-10 sm:w-16 bg-yellow-500"></div>
       </div>
 
-      <!-- Profile Grid -->
-      <div class="grid md:grid-cols-2 gap-6 lg:gap-8 mb-8">
-        <!-- Column 1: Founder Card -->
-        <div class="bg-[#1a1a1a] rounded-xl p-6 sm:p-8 border border-yellow-500/10 flex flex-col h-full">
-          <div class="flex items-start gap-4 mb-5">
-            <img src="images/Founder.jpg" alt="Founder" class="w-20 h-20 rounded-full object-cover border-2 border-yellow-500 flex-shrink-0" />
-            <div class="min-w-0">
-              <h3 class="text-white text-xl font-bold">Rico Herman</h3>
-              <p class="text-yellow-400 text-sm font-semibold mt-0.5">Pengasas Sate Murni</p>
-            </div>
-          </div>
-          <ul class="space-y-1.5 mb-5">
-            <li class="flex items-start gap-2 text-gray-400 text-sm"><i class="fas fa-check-circle text-yellow-400 w-4 mt-0.5"></i> 30 Years in Hotel Industry</li>
-            <li class="flex items-start gap-2 text-gray-400 text-sm"><i class="fas fa-check-circle text-yellow-400 w-4 mt-0.5"></i> DHM Mahtec - Shatec</li>
-            <li class="flex items-start gap-2 text-gray-400 text-sm"><i class="fas fa-check-circle text-yellow-400 w-4 mt-0.5"></i> PIND - Pakar Industry (Front Office)</li>
-          </ul>
-          <hr class="border-yellow-500/20 mb-5" />
-          <div class="space-y-3 flex-1">
-            <h4 class="text-yellow-400 text-xs font-bold uppercase tracking-widest">KATA-KATA ALUAN</h4>
-            <blockquote class="text-gray-300 text-sm italic leading-relaxed border-l-2 border-yellow-500 pl-4">
-              &ldquo;Assalamualaikum dan selamat datang ke Sate Murni. Berbekalkan keazaman untuk mengekalkan warisan rasa tradisional, kami amat komited dalam memastikan setiap hidangan bukan sahaja lazat, malah terjamin bersih dan mematuhi syarak. Kejayaan kami mendapatkan pengiktirafan Halal JAKIM adalah bukti kesungguhan kami memberikan yang terbaik buat pelanggan. Terima kasih atas sokongan berterusan anda.&rdquo;
-            </blockquote>
-          </div>
-        </div>
-
-        <!-- Column 2: Director & Company History Card -->
-        <div class="bg-[#1a1a1a] rounded-xl p-6 sm:p-8 border border-yellow-500/10 flex flex-col h-full">
-          <div class="flex items-start gap-4 mb-5">
-            <img src="images/Director.jpeg" alt="Director" class="w-20 h-20 rounded-full object-cover border-2 border-yellow-500 flex-shrink-0" />
-            <div class="min-w-0">
-              <h3 class="text-white text-xl font-bold">Lt Muda PA Nurul Amisha Rico</h3>
-              <p class="text-yellow-400 text-sm font-semibold mt-0.5">Director Sate Murni</p>
-              <p class="text-gray-400 text-sm mt-0.5">BSc in Statistics with Honors (UKM)</p>
-            </div>
-          </div>
-          <hr class="border-yellow-500/20 mb-5" />
-          <div class="space-y-4 flex-1">
-            <h4 class="text-yellow-400 text-xs font-bold uppercase tracking-widest">LATAR BELAKANG SYARIKAT</h4>
+      <!-- Profiles Container (Vertical Stack) -->
+      <div class="max-w-5xl mx-auto flex flex-col gap-6 px-0">
+        <!-- Card 1: Founder (Top) -->
+        <div class="flex flex-col md:flex-row gap-6 bg-[#1a1a1a] p-8 rounded-xl border border-gray-800 items-center md:items-start">
+          <img src="images/Founder.jpg" alt="Founder" class="w-32 h-32 rounded-full object-cover border-2 border-yellow-500 flex-shrink-0" />
+          <div class="flex-1 text-center md:text-left">
+            <h3 class="text-2xl text-white font-bold">Rico Herman</h3>
+            <p class="text-yellow-500 text-sm mb-4">Pengasas Sate Murni</p>
+            <ul class="space-y-1.5 mb-0 inline-block text-left">
+              <li class="flex items-start gap-2 text-gray-400 text-sm"><i class="fas fa-check-circle text-yellow-400 w-4 mt-0.5"></i> 30 Years in Hotel Industry</li>
+              <li class="flex items-start gap-2 text-gray-400 text-sm"><i class="fas fa-check-circle text-yellow-400 w-4 mt-0.5"></i> DHM Mahtec - Shatec</li>
+              <li class="flex items-start gap-2 text-gray-400 text-sm"><i class="fas fa-check-circle text-yellow-400 w-4 mt-0.5"></i> PIND - Pakar Industry (Front Office)</li>
+            </ul>
+            <div class="border-b border-gray-800 my-4"></div>
+            <h4 class="text-xs text-yellow-500 font-bold uppercase mb-2">LATAR BELAKANG SYARIKAT</h4>
             <p class="text-gray-300 text-sm leading-relaxed">
               Sate Murni ditubuhkan secara rasmi pada tahun 2021. Gabungan resipi asli dan pengalaman lebih 30 tahun pengasas kami dalam industri perhotelan membolehkan kami menyajikan sate dengan kualiti hospitaliti bertaraf antarabangsa.
             </p>
           </div>
         </div>
+
+        <!-- Card 2: Director (Bottom) -->
+        <div class="flex flex-col md:flex-row gap-6 bg-[#1a1a1a] p-8 rounded-xl border border-yellow-500/30 shadow-[0_0_15px_rgba(234,179,8,0.05)] items-center md:items-start">
+          <img src="images/Director.jpeg" alt="Director" class="w-32 h-32 rounded-full object-cover border-2 border-yellow-500 flex-shrink-0" />
+          <div class="flex-1 text-center md:text-left">
+            <h3 class="text-2xl text-white font-bold">Lt Muda PA Nurul Amisha Rico</h3>
+            <p class="text-yellow-500 text-sm">Director Sate Murni</p>
+            <p class="text-gray-400 text-xs mb-4">BSc in Statistics with Honors (UKM)</p>
+            <div class="border-b border-gray-800 my-4"></div>
+            <h4 class="text-xs text-yellow-500 font-bold uppercase mb-2">KATA-KATA ALUAN</h4>
+            <blockquote class="border-l-2 border-yellow-500 pl-4 text-gray-300 text-sm leading-relaxed italic">
+              &ldquo;Assalamualaikum dan selamat datang ke Sate Murni. Berbekalkan keazaman untuk mengekalkan warisan rasa tradisional, kami amat komited dalam memastikan setiap hidangan bukan sahaja lazat, malah terjamin bersih dan mematuhi syarak. Kejayaan kami mendapatkan pengiktirafan Halal JAKIM adalah bukti kesungguhan kami memberikan yang terbaik buat pelanggan. Terima kasih atas sokongan berterusan anda.&rdquo;
+            </blockquote>
+          </div>
+        </div>
       </div>
 
-      <!-- Halal Milestone Banner (Full Width) -->
-      <div class="border border-green-900/50 rounded-xl p-5 sm:p-6 mb-12 lg:mb-16 flex items-center justify-center gap-3 sm:gap-4" style="background-color: #0f1a0f;">
-        <i class="fas fa-certificate text-green-400 text-2xl sm:text-3xl flex-shrink-0"></i>
-        <p class="text-gray-300 text-sm sm:text-base leading-relaxed text-center sm:text-left">
-          Alhamdulillah, secara rasmi memperoleh pengesahan <strong class="text-white font-semibold">Halal JAKIM</strong> pada <strong class="text-white font-semibold">Januari 2025</strong>.
-        </p>
+      <!-- Halal Milestone Banner -->
+      <div class="max-w-5xl mx-auto mt-6 mb-12 px-0">
+        <div class="bg-[#0a1a0a] border border-green-800 rounded-xl p-4 flex items-center justify-center gap-4 text-center">
+          <i class="fas fa-certificate text-green-400 text-xl flex-shrink-0"></i>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Alhamdulillah, secara rasmi memperoleh pengesahan <strong class="text-white font-semibold">Halal JAKIM</strong> pada <strong class="text-white font-semibold">Januari 2025</strong>.
+          </p>
+        </div>
       </div>
 
       <!-- 4 Features Grid -->
