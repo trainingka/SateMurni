@@ -66,21 +66,25 @@
             SATE MURNI<br />
             <span class="text-yellow-400">TAMAN DESA</span>
           </h1>
-          <p class="text-yellow-400 italic text-lg sm:text-xl font-serif">"Rasa Sate Sebenar"</p>
-          <p class="text-gray-400 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
+          <p class="text-yellow-400 italic text-lg sm:text-xl font-serif" data-i18n="hero.tagline">"Rasa Sate Sebenar"</p>
+          <p class="text-gray-400 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed" data-i18n="hero.desc">
             Sate pilihan dengan rasa asli, diperap sempurna dan dibakar dengan penuh kasih sayang.
           </p>
           <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
             <a href="https://wa.me/60123873126" target="_blank" class="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-7 py-3.5 rounded-xl transition-all shadow-lg shadow-yellow-500/25">
-              <i class="fab fa-whatsapp"></i> WHATSAPP SEKARANG
+              <i class="fab fa-whatsapp"></i> <span data-i18n="hero.btnWA">WHATSAPP SEKARANG</span>
             </a>
             <a href="#service" class="inline-flex items-center gap-2 border border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black font-semibold px-7 py-3.5 rounded-xl transition-all">
-              <i class="fas fa-utensils"></i> LIHAT PAKEJ CATERING
+              <i class="fas fa-utensils"></i> <span data-i18n="hero.btnCater">LIHAT PAKEJ CATERING</span>
             </a>
           </div>
         </div>
         <!-- Right Column -->
-        <div class="flex justify-center">
+        <div class="flex justify-center relative">
+          <button id="lang-toggle" class="absolute top-4 right-4 z-20 bg-yellow-500 hover:bg-yellow-400 text-black font-bold text-xs px-3 py-1.5 rounded-full transition shadow-md flex items-center gap-1">
+            <span id="lang-label">EN</span>
+            <i class="fas fa-globe text-xs"></i>
+          </button>
           <img src="images/HeroSate2.png" alt="Hero Sate" class="w-full h-auto" />
         </div>
       </div>
@@ -93,7 +97,7 @@
       <!-- Section Header -->
       <div class="flex items-center justify-center gap-4 mb-12 lg:mb-16">
         <div class="h-px w-10 sm:w-16 bg-yellow-500"></div>
-        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-white text-center whitespace-nowrap">Tentang Kami</h2>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-white text-center whitespace-nowrap" data-i18n="about.title">Tentang Kami</h2>
         <div class="h-px w-10 sm:w-16 bg-yellow-500"></div>
       </div>
 
@@ -105,7 +109,7 @@
                 <img src="images/Founder2.jpg" alt="Founder Sate Murni" class="w-24 h-24 min-w-[6rem] rounded-full object-cover object-center shrink-0 border-2 border-yellow-500 shadow-md">
                 <div class="flex flex-col items-start w-full">
                     <h3 class="text-xl font-bold text-white">Rico Herman</h3>
-                    <p class="text-yellow-500 text-sm mb-3">Pengasas Sate Murni</p>
+                    <p class="text-yellow-500 text-sm mb-3" data-i18n="about.founderTitle">Pengasas Sate Murni</p>
                     <ul class="text-xs text-gray-400 space-y-1.5 flex flex-col items-start w-full">
                         <li class="flex items-center gap-2 justify-start"><i class="fas fa-check-circle text-yellow-500 w-3"></i> <span>30 Years in Hotel Industry</span></li>
                         <li class="flex items-center gap-2 justify-start"><i class="fas fa-check-circle text-yellow-500 w-3"></i> <span>DHM Mahtec - Shatec</span></li>
@@ -118,7 +122,7 @@
                 <img src="images/Director2.png" alt="Director Sate Murni" class="w-24 h-24 min-w-[6rem] rounded-full object-cover object-center shrink-0 border-2 border-yellow-500 shadow-md">
                 <div class="flex flex-col items-start w-full">
                     <h3 class="text-xl font-bold text-white">Lt Muda PA Nurul Amisha Rico</h3>
-                    <p class="text-yellow-500 text-sm mb-3">Director Sate Murni</p>
+                    <p class="text-yellow-500 text-sm mb-3" data-i18n="about.directorTitle">Director Sate Murni</p>
                     <p class="text-xs text-gray-400">BSc in Statistics with Honors (UKM)</p>
                 </div>
             </div>
@@ -129,9 +133,9 @@
 
         <!-- PART C: Content Row (Centered) -->
         <div class="flex flex-col items-center text-center max-w-3xl mx-auto">
-          <h4 class="text-xs text-yellow-500 font-bold uppercase tracking-widest mb-3">LATAR BELAKANG SYARIKAT</h4>
-          <p class="text-gray-300 text-sm leading-relaxed">
-            Sate Murni ditubuhkan secara rasmi pada tahun 2021. Berbekalkan pengalaman lebih 30 tahun pengasas kami dalam industri perhotelan, kami menyajikan sate pada kualiti hospitaliti bertaraf antarabangsa. Kini, Sate Murni gah sebagai pilihan kegemaran ramai di sekitar Taman Desa, Kuala Lumpur. Kami amat sinonim dengan &lsquo;Rasa Sate Sebenar&rsquo;, menampilkan gaya pembakaran tradisional di mana potongan daging premium diselitkan dengan sedikit lemak bagi membangkitkan aroma dan kelazatan yang tiada tandingan.
+          <h4 class="text-xs text-yellow-500 font-bold uppercase tracking-widest mb-3" data-i18n="about.bgTitle">LATAR BELAKANG SYARIKAT</h4>
+          <p class="text-gray-300 text-sm leading-relaxed" data-i18n="about.bgText">
+            Sate Murni ditubuhkan secara rasmi pada tahun 2021. Berbekalkan pengalaman lebih 30 tahun pengasas kami dalam industri perhotelan, kami menyajikan sate pada kualiti hospitaliti bertaraf antarabangsa. Kini, Sate Murni gah sebagai pilihan kegemaran ramai di sekitar Taman Desa, Kuala Lumpur. Kami amat sinonim dengan 'Rasa Sate Sebenar', menampilkan gaya pembakaran tradisional di mana potongan daging premium diselitkan dengan sedikit lemak bagi membangkitkan aroma dan kelazatan yang tiada tandingan.
           </p>
         </div>
       </div>
@@ -140,7 +144,7 @@
       <div class="max-w-5xl mx-auto mt-6 mb-12 px-0 sm:px-4">
         <div class="bg-[#0a1a0a] border border-green-800 rounded-xl p-4 flex items-center justify-center gap-4 text-center">
           <i class="fas fa-certificate text-green-400 text-xl flex-shrink-0"></i>
-          <p class="text-gray-300 text-sm leading-relaxed">
+          <p class="text-gray-300 text-sm leading-relaxed" data-i18n="halal.text">
             Alhamdulillah, secara rasmi memperoleh pengesahan <strong class="text-white font-semibold">Halal JAKIM</strong> pada <strong class="text-white font-semibold">Januari 2025</strong>.
           </p>
         </div>
@@ -152,29 +156,29 @@
           <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-yellow-500/10 text-yellow-400 text-2xl group-hover:bg-yellow-500 group-hover:text-black transition-all">
             <i class="fas fa-star"></i>
           </div>
-          <h3 class="text-yellow-400 font-bold text-lg mb-2">Rasa Asli</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">Resepi turun temurun dengan bumbu istimewa.</p>
+          <h3 class="text-yellow-400 font-bold text-lg mb-2" data-i18n="feat1.title">Rasa Asli</h3>
+          <p class="text-gray-400 text-sm leading-relaxed" data-i18n="feat1.desc">Resepi turun temurun dengan bumbu istimewa.</p>
         </div>
         <div class="text-center p-6 rounded-2xl bg-[#1a1a1a] border border-yellow-500/10 hover:border-yellow-500/40 transition-all group">
           <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-yellow-500/10 text-yellow-400 text-2xl group-hover:bg-yellow-500 group-hover:text-black transition-all">
             <i class="fas fa-mosque"></i>
           </div>
-          <h3 class="text-yellow-400 font-bold text-lg mb-2">100% Halal</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">Disahkan Halal oleh JAKIM (MS 1500:2019).</p>
+          <h3 class="text-yellow-400 font-bold text-lg mb-2" data-i18n="feat2.title">100% Halal</h3>
+          <p class="text-gray-400 text-sm leading-relaxed" data-i18n="feat2.desc">Disahkan Halal oleh JAKIM (MS 1500:2019).</p>
         </div>
         <div class="text-center p-6 rounded-2xl bg-[#1a1a1a] border border-yellow-500/10 hover:border-yellow-500/40 transition-all group">
           <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-yellow-500/10 text-yellow-400 text-2xl group-hover:bg-yellow-500 group-hover:text-black transition-all">
             <i class="fas fa-fire"></i>
           </div>
-          <h3 class="text-yellow-400 font-bold text-lg mb-2">Dibakar Sempurna</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">Setiap cucuk sate dibakar dengan sempurna.</p>
+          <h3 class="text-yellow-400 font-bold text-lg mb-2" data-i18n="feat3.title">Dibakar Sempurna</h3>
+          <p class="text-gray-400 text-sm leading-relaxed" data-i18n="feat3.desc">Setiap cucuk sate dibakar dengan sempurna.</p>
         </div>
         <div class="text-center p-6 rounded-2xl bg-[#1a1a1a] border border-yellow-500/10 hover:border-yellow-500/40 transition-all group">
           <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-yellow-500/10 text-yellow-400 text-2xl group-hover:bg-yellow-500 group-hover:text-black transition-all">
             <i class="fas fa-users"></i>
           </div>
-          <h3 class="text-yellow-400 font-bold text-lg mb-2">Untuk Semua</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">Sesuai untuk makan harian, majlis, dan korporat.</p>
+          <h3 class="text-yellow-400 font-bold text-lg mb-2" data-i18n="feat4.title">Untuk Semua</h3>
+          <p class="text-gray-400 text-sm leading-relaxed" data-i18n="feat4.desc">Sesuai untuk makan harian, majlis, dan korporat.</p>
         </div>
       </div>
     </div>
@@ -224,7 +228,7 @@
       <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         <!-- Left -->
         <div class="space-y-6">
-          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-white leading-tight">
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-white leading-tight" data-i18n="services.title">
             MENERIMA TEMPAHAN UNTUK <span class="text-yellow-400">SEMUA MAJLIS</span>
           </h2>
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
@@ -256,13 +260,13 @@
           <div class="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-yellow-500/20 text-yellow-400 text-3xl">
             <i class="fab fa-whatsapp"></i>
           </div>
-          <h3 class="font-serif text-2xl sm:text-3xl text-yellow-400">SILA WHATSAPP KAMI</h3>
+          <h3 class="font-serif text-2xl sm:text-3xl text-yellow-400" data-i18n="services.waTitle">SILA WHATSAPP KAMI</h3>
           <a href="https://wa.me/60123873126" target="_blank" class="inline-block text-2xl sm:text-3xl font-bold text-white hover:text-yellow-400 transition-colors">
             +6012 387 3126
           </a>
-          <p class="text-gray-400 text-sm">Klik untuk terus berhubung dengan kami di WhatsApp</p>
+          <p class="text-gray-400 text-sm" data-i18n="services.waSub">Klik untuk terus berhubung dengan kami di WhatsApp</p>
           <a href="https://wa.me/60123873126" target="_blank" class="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-6 py-3 rounded-xl transition-all mt-2">
-            <i class="fab fa-whatsapp"></i> WhatsApp Sekarang
+            <i class="fab fa-whatsapp"></i> <span data-i18n="services.waBtn">WhatsApp Sekarang</span>
           </a>
         </div>
       </div>
@@ -272,17 +276,17 @@
   <!-- ========== GALLERY SECTION ========== -->
   <section id="gallery" class="py-16 lg:py-24 bg-black">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-white text-center mb-4">GALERI KAMI</h2>
-      <p class="text-gray-400 text-center mb-8">Moment terbaik bersama Sate Murni</p>
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-white text-center mb-4" data-i18n="gallery.title">GALERI KAMI</h2>
+      <p class="text-gray-400 text-center mb-8" data-i18n="gallery.sub">Moment terbaik bersama Sate Murni</p>
 
       <!-- Filter Tabs -->
       <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10">
-        <button class="px-4 py-2 rounded-full text-sm font-medium bg-yellow-500 text-black">SEMUA</button>
-        <button class="px-4 py-2 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-yellow-500 hover:text-black transition-all">MAJLIS</button>
-        <button class="px-4 py-2 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-yellow-500 hover:text-black transition-all">KORPORAT</button>
-        <button class="px-4 py-2 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-yellow-500 hover:text-black transition-all">STALL</button>
-        <button class="px-4 py-2 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-yellow-500 hover:text-black transition-all">SIJIL</button>
-        <button class="px-4 py-2 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-yellow-500 hover:text-black transition-all">VIDEO REVIEW</button>
+        <button class="px-4 py-2 rounded-full text-sm font-medium bg-yellow-500 text-black" data-i18n="gallery.all">SEMUA</button>
+        <button class="px-4 py-2 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-yellow-500 hover:text-black transition-all" data-i18n="gallery.events">MAJLIS</button>
+        <button class="px-4 py-2 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-yellow-500 hover:text-black transition-all" data-i18n="gallery.corp">KORPORAT</button>
+        <button class="px-4 py-2 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-yellow-500 hover:text-black transition-all" data-i18n="gallery.stall">STALL</button>
+        <button class="px-4 py-2 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-yellow-500 hover:text-black transition-all" data-i18n="gallery.cert">SIJIL</button>
+        <button class="px-4 py-2 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-yellow-500 hover:text-black transition-all" data-i18n="gallery.vid">VIDEO REVIEW</button>
       </div>
 
       <!-- Grid -->
@@ -338,7 +342,7 @@
       </div>
       <div class="text-center mt-8">
         <a href="#" class="inline-flex items-center gap-2 border border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black font-semibold px-6 py-3 rounded-xl transition-all">
-          <i class="fas fa-images"></i> LIHAT LEBIH BANYAK GALERI
+          <i class="fas fa-images"></i> <span data-i18n="gallery.more">LIHAT LEBIH BANYAK GALERI</span>
         </a>
       </div>
     </div>
@@ -347,7 +351,7 @@
   <!-- ========== VIDEO FEEDBACK SECTION ========== -->
   <section id="review" class="py-16 lg:py-24 bg-gray-950">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-white text-center mb-12">VIDEO FEEDBACK PELANGGAN</h2>
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-white text-center mb-12" data-i18n="video.title">VIDEO FEEDBACK PELANGGAN</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="relative group rounded-xl overflow-hidden">
           <img src="https://placehold.co/300x400/333/FFF?text=Video+1" alt="Video" class="w-full h-64 object-cover" />
@@ -383,7 +387,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-16">
         <!-- Column 1: Hubungi Kami -->
         <div class="space-y-4">
-          <h4 class="font-serif text-xl text-yellow-400 font-bold">Hubungi Kami</h4>
+          <h4 class="font-serif text-xl text-yellow-400 font-bold" data-i18n="footer.contactTitle">Hubungi Kami</h4>
           <div class="space-y-3 text-gray-400 text-sm">
             <p class="flex items-center gap-3">
               <i class="fas fa-phone text-yellow-400 w-4"></i>
@@ -404,19 +408,19 @@
 
         <!-- Column 2: Alamat -->
         <div class="space-y-4">
-          <h4 class="font-serif text-xl text-yellow-400 font-bold">Alamat</h4>
+          <h4 class="font-serif text-xl text-yellow-400 font-bold" data-i18n="footer.addressTitle">Alamat</h4>
           <p class="text-gray-400 text-sm leading-relaxed">
             <i class="fas fa-map-marker-alt text-yellow-400 mr-2"></i>
             A-0-5, Teratak Muhibbah 1, Taman Desa, Jalan Klang Lama, 58100 Kuala Lumpur
           </p>
           <a href="https://maps.google.com/?q=Teratak+Muhibbah+1+Taman+Desa+Kuala+Lumpur" target="_blank" class="inline-flex items-center gap-2 text-yellow-400 hover:text-yellow-300 text-sm font-medium transition-colors">
-            <i class="fas fa-map"></i> Buka di Google Maps
+            <i class="fas fa-map"></i> <span data-i18n="footer.openMap">Buka di Google Maps</span>
           </a>
         </div>
 
         <!-- Column 3: Lokasi Stall -->
         <div class="space-y-4">
-          <h4 class="font-serif text-xl text-yellow-400 font-bold">Lokasi Stall</h4>
+          <h4 class="font-serif text-xl text-yellow-400 font-bold" data-i18n="footer.stallTitle">Lokasi Stall</h4>
           <ul class="space-y-2 text-gray-400 text-sm">
             <li class="flex items-center gap-2"><i class="fas fa-store text-yellow-400 text-xs"></i> Restoran Al Sarifa</li>
             <li class="flex items-center gap-2"><i class="fas fa-store text-yellow-400 text-xs"></i> Restoran Hj Basheer</li>
@@ -440,8 +444,100 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- ========== MOBILE MENU TOGGLE ========== -->
+  <!-- ========== MOBILE MENU TOGGLE & LANGUAGE SWITCHER ========== -->
   <script>
+    var langData = {
+      ms: {
+        'hero.tagline': '"Rasa Sate Sebenar"',
+        'hero.desc': 'Sate pilihan dengan rasa asli, diperap sempurna dan dibakar dengan penuh kasih sayang.',
+        'hero.btnWA': 'WHATSAPP SEKARANG',
+        'hero.btnCater': 'LIHAT PAKEJ CATERING',
+        'about.title': 'Tentang Kami',
+        'about.founderTitle': 'Pengasas Sate Murni',
+        'about.directorTitle': 'Director Sate Murni',
+        'about.bgTitle': 'LATAR BELAKANG SYARIKAT',
+        'about.bgText': 'Sate Murni ditubuhkan secara rasmi pada tahun 2021. Berbekalkan pengalaman lebih 30 tahun pengasas kami dalam industri perhotelan, kami menyajikan sate pada kualiti hospitaliti bertaraf antarabangsa. Kini, Sate Murni gah sebagai pilihan kegemaran ramai di sekitar Taman Desa, Kuala Lumpur. Kami amat sinonim dengan \'Rasa Sate Sebenar\', menampilkan gaya pembakaran tradisional di mana potongan daging premium diselitkan dengan sedikit lemak bagi membangkitkan aroma dan kelazatan yang tiada tandingan.',
+        'halal.text': 'Alhamdulillah, secara rasmi memperoleh pengesahan <strong class="text-white font-semibold">Halal JAKIM</strong> pada <strong class="text-white font-semibold">Januari 2025</strong>.',
+        'feat1.title': 'Rasa Asli',
+        'feat1.desc': 'Resepi turun temurun dengan bumbu istimewa.',
+        'feat2.title': '100% Halal',
+        'feat2.desc': 'Disahkan Halal oleh JAKIM (MS 1500:2019).',
+        'feat3.title': 'Dibakar Sempurna',
+        'feat3.desc': 'Setiap cucuk sate dibakar dengan sempurna.',
+        'feat4.title': 'Untuk Semua',
+        'feat4.desc': 'Sesuai untuk makan harian, majlis, dan korporat.',
+        'services.title': 'MENERIMA TEMPAHAN UNTUK <span class="text-yellow-400">SEMUA MAJLIS</span>',
+        'services.waTitle': 'SILA WHATSAPP KAMI',
+        'services.waSub': 'Klik untuk terus berhubung dengan kami di WhatsApp',
+        'services.waBtn': 'WhatsApp Sekarang',
+        'gallery.title': 'GALERI KAMI',
+        'gallery.sub': 'Moment terbaik bersama Sate Murni',
+        'gallery.all': 'SEMUA',
+        'gallery.events': 'MAJLIS',
+        'gallery.corp': 'KORPORAT',
+        'gallery.stall': 'STALL',
+        'gallery.cert': 'SIJIL',
+        'gallery.vid': 'VIDEO REVIEW',
+        'gallery.more': 'LIHAT LEBIH BANYAK GALERI',
+        'video.title': 'VIDEO FEEDBACK PELANGGAN',
+        'footer.contactTitle': 'Hubungi Kami',
+        'footer.addressTitle': 'Alamat',
+        'footer.openMap': 'Buka di Google Maps',
+        'footer.stallTitle': 'Lokasi Stall'
+      },
+      en: {
+        'hero.tagline': '"The Real Taste of Satay"',
+        'hero.desc': 'Selected satay with authentic flavor, perfectly marinated and grilled with love.',
+        'hero.btnWA': 'WHATSAPP NOW',
+        'hero.btnCater': 'VIEW CATERING PACKAGE',
+        'about.title': 'About Us',
+        'about.founderTitle': 'Founder of Sate Murni',
+        'about.directorTitle': 'Director of Sate Murni',
+        'about.bgTitle': 'COMPANY BACKGROUND',
+        'about.bgText': 'Sate Murni was officially established in 2021. With over 30 years of experience by our founder in the hospitality industry, we serve satay at international hospitality standards. Today, Sate Murni proudly stands as a favorite choice among locals in Taman Desa, Kuala Lumpur. We are synonymous with \'The Real Taste of Satay\', showcasing traditional grilling methods where premium meat cuts are interlaced with a touch of fat to evoke unmatched aroma and deliciousness.',
+        'halal.text': 'Alhamdulillah, officially obtained <strong class="text-white font-semibold">Halal JAKIM</strong> certification in <strong class="text-white font-semibold">January 2025</strong>.',
+        'feat1.title': 'Original Taste',
+        'feat1.desc': 'Generational recipe with special spices.',
+        'feat2.title': '100% Halal',
+        'feat2.desc': 'Certified Halal by JAKIM (MS 1500:2019).',
+        'feat3.title': 'Perfectly Grilled',
+        'feat3.desc': 'Every skewer is grilled to perfection.',
+        'feat4.title': 'For Everyone',
+        'feat4.desc': 'Suitable for daily meals, events, and corporate.',
+        'services.title': 'ACCEPTING ORDERS FOR <span class="text-yellow-400">ALL EVENTS</span>',
+        'services.waTitle': 'PLEASE WHATSAPP US',
+        'services.waSub': 'Click to contact us on WhatsApp',
+        'services.waBtn': 'WhatsApp Now',
+        'gallery.title': 'OUR GALLERY',
+        'gallery.sub': 'Best moments with Sate Murni',
+        'gallery.all': 'ALL',
+        'gallery.events': 'EVENTS',
+        'gallery.corp': 'CORPORATE',
+        'gallery.stall': 'STALL',
+        'gallery.cert': 'CERTIFICATE',
+        'gallery.vid': 'VIDEO REVIEW',
+        'gallery.more': 'VIEW MORE GALLERY',
+        'video.title': 'CUSTOMER VIDEO FEEDBACK',
+        'footer.contactTitle': 'Contact Us',
+        'footer.addressTitle': 'Address',
+        'footer.openMap': 'Open in Google Maps',
+        'footer.stallTitle': 'Stall Locations'
+      }
+    };
+
+    function setLang(lang) {
+      var items = document.querySelectorAll('[data-i18n]');
+      items.forEach(function(el) {
+        var key = el.getAttribute('data-i18n');
+        if (langData[lang] && langData[lang][key]) {
+          el.innerHTML = langData[lang][key];
+        }
+      });
+      document.documentElement.lang = lang;
+      document.getElementById('lang-label').textContent = lang === 'ms' ? 'EN' : 'BM';
+      localStorage.setItem('sate-lang', lang);
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
       var btn = document.getElementById('mobile-menu-btn');
       var menu = document.getElementById('mobile-menu');
@@ -450,6 +546,13 @@
           menu.classList.toggle('hidden');
         });
       }
+
+      var saved = localStorage.getItem('sate-lang') || 'ms';
+      document.getElementById('lang-toggle').addEventListener('click', function() {
+        var cur = document.documentElement.lang || 'ms';
+        setLang(cur === 'ms' ? 'en' : 'ms');
+      });
+      setLang(saved);
     });
   </script>
 </body>
