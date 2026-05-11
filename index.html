@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ms" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sate Murni – Sate Sebenar, Rasa Asli</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .font-serif { font-family: 'Playfair Display', serif; }
+  </style>
+</head>
+<body class="bg-black text-white">
+  <!-- ========== NAVBAR ========== -->
+  <nav class="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-yellow-500/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <!-- Left: Logo -->
+        <div class="flex-shrink-0">
+          <span class="font-serif text-xl lg:text-2xl text-yellow-400 tracking-wide cursor-default">SATE MURNI</span>
+        </div>
+
+        <!-- Center: Nav Links (desktop) -->
+        <div class="hidden lg:flex items-center space-x-8">
+          <a href="#home" class="text-sm font-medium text-white hover:text-yellow-400 transition-colors">HOME</a>
+          <a href="#about" class="text-sm font-medium text-gray-300 hover:text-yellow-400 transition-colors">ABOUT</a>
+          <a href="#service" class="text-sm font-medium text-gray-300 hover:text-yellow-400 transition-colors">SERVICE</a>
+          <a href="#gallery" class="text-sm font-medium text-gray-300 hover:text-yellow-400 transition-colors">GALLERY</a>
+          <a href="#review" class="text-sm font-medium text-gray-300 hover:text-yellow-400 transition-colors">REVIEW</a>
+          <a href="#contact" class="text-sm font-medium text-gray-300 hover:text-yellow-400 transition-colors">CONTACT</a>
+        </div>
+
+        <!-- Right: WhatsApp Button -->
+        <div class="flex items-center">
+          <a href="https://wa.me/60123873126" target="_blank" class="hidden sm:inline-flex items-center gap-2 border border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black font-semibold text-sm px-4 py-2 rounded-lg transition-all">
+            <i class="fab fa-whatsapp"></i> 012-387 3126
+          </a>
+          <!-- Mobile menu toggle -->
+          <button id="mobile-menu-btn" class="lg:hidden ml-3 text-gray-300 hover:text-yellow-400 transition-colors">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile Nav -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-black/95 border-t border-yellow-500/10">
+      <div class="px-4 py-4 space-y-3">
+        <a href="#home" class="block text-sm font-medium text-white hover:text-yellow-400 transition-colors">HOME</a>
+        <a href="#about" class="block text-sm font-medium text-gray-300 hover:text-yellow-400 transition-colors">ABOUT</a>
+        <a href="#service" class="block text-sm font-medium text-gray-300 hover:text-yellow-400 transition-colors">SERVICE</a>
+        <a href="#gallery" class="block text-sm font-medium text-gray-300 hover:text-yellow-400 transition-colors">GALLERY</a>
+        <a href="#review" class="block text-sm font-medium text-gray-300 hover:text-yellow-400 transition-colors">REVIEW</a>
+        <a href="#contact" class="block text-sm font-medium text-gray-300 hover:text-yellow-400 transition-colors">CONTACT</a>
+        <a href="https://wa.me/60123873126" target="_blank" class="inline-flex items-center gap-2 border border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black font-semibold text-sm px-4 py-2 rounded-lg transition-all mt-2">
+          <i class="fab fa-whatsapp"></i> 012-387 3126
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section id="home" class="relative overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black">
+    <div class="absolute inset-0 bg-[url('https://placehold.co/1920x1080/111/FFF?text=Pattern')] opacity-5"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-24 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <!-- Left Column -->
+        <div class="space-y-6 lg:space-y-8 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 bg-yellow-500/10 text-yellow-400 text-xs sm:text-sm font-medium px-4 py-1.5 rounded-full border border-yellow-500/30">
+            <i class="fas fa-check-circle"></i>
+            <span>(Halal Logo MS 1500:2019) Sejak Dulu, Kekal Di Hati</span>
+          </div>
+          <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-white">
+            SATE MURNI<br />
+            <span class="text-yellow-400">TAMAN DESA</span>
+          </h1>
+          <p class="text-yellow-400 italic text-lg sm:text-xl font-serif">"Rasa Sate Sebenar"</p>
+          <p class="text-gray-400 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            Sate pilihan dengan rasa asli, diperap sempurna dan dibakar dengan penuh kasih sayang.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="https://wa.me/60123873126" target="_blank" class="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-7 py-3.5 rounded-xl transition-all shadow-lg shadow-yellow-500/25">
+              <i class="fab fa-whatsapp"></i> WHATSAPP SEKARANG
+            </a>
+            <a href="#service" class="inline-flex items-center gap-2 border border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black font-semibold px-7 py-3.5 rounded-xl transition-all">
+              <i class="fas fa-utensils"></i> LIHAT PAKEJ CATERING
+            </a>
+          </div>
+        </div>
+        <!-- Right Column -->
+        <div class="flex justify-center">
+          <img src="https://placehold.co/600x400/222/FFF?text=Satay+Image" alt="Satay Image" class="w-full max-w-lg rounded-2xl shadow-2xl shadow-yellow-500/10 border border-yellow-500/20" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURES SECTION ========== -->
+  <section id="about" class="py-16 lg:py-24 bg-gray-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Feature 1 -->
+        <div class="text-center p-6 rounded-2xl bg-gray-900/50 border border-yellow-500/10 hover:border-yellow-500/40 transition-all group">
+          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-yellow-500/10 text-yellow-400 text-2xl group-hover:bg-yellow-500 group-hover:text-black transition-all">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3 class="text-yellow-400 font-bold text-lg mb-2">Rasa Asli</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Resepi turun temurun dengan bumbu istimewa.</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="text-center p-6 rounded-2xl bg-gray-900/50 border border-yellow-500/10 hover:border-yellow-500/40 transition-all group">
+          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-yellow-500/10 text-yellow-400 text-2xl group-hover:bg-yellow-500 group-hover:text-black transition-all">
+            <i class="fas fa-mosque"></i>
+          </div>
+          <h3 class="text-yellow-400 font-bold text-lg mb-2">100% Halal</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Disahkan Halal oleh JAKIM (MS 1500:2019).</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="text-center p-6 rounded-2xl bg-gray-900/50 border border-yellow-500/10 hover:border-yellow-500/40 transition-all group">
+          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-yellow-500/10 text-yellow-400 text-2xl group-hover:bg-yellow-500 group-hover:text-black transition-all">
+            <i class="fas fa-fire"></i>
+          </div>
+          <h3 class="text-yellow-400 font-bold text-lg mb-2">Dibakar Sempurna</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Setiap cucuk sate dibakar dengan sempurna.</p>
+        </div>
+        <!-- Feature 4 -->
+        <div class="text-center p-6 rounded-2xl bg-gray-900/50 border border-yellow-500/10 hover:border-yellow-500/40 transition-all group">
+          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-yellow-500/10 text-yellow-400 text-2xl group-hover:bg-yellow-500 group-hover:text-black transition-all">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3 class="text-yellow-400 font-bold text-lg mb-2">Untuk Semua</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Sesuai untuk makan harian, majlis, dan korporat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SATE CUP MENU SECTION ========== -->
+  <section id="service" class="py-16 lg:py-24 bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Left Image -->
+        <div class="flex justify-center">
+          <img src="https://placehold.co/400x400/222/FFF?text=Sate+Cup" alt="Sate Cup" class="w-full max-w-sm rounded-2xl shadow-2xl shadow-yellow-500/10 border border-yellow-500/20" />
+        </div>
+        <!-- Right Content -->
+        <div class="space-y-6">
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-white leading-tight">
+            Pakej Catering – <span class="text-yellow-400">SATE MURNI SET CUP</span>
+          </h2>
+          <p class="text-gray-400 text-base sm:text-lg">5 pcs sate serve with nasi impit, kuah kacang, timun &amp; bawang</p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="border border-yellow-500 rounded-xl p-4 text-center hover:bg-yellow-500/10 transition-all">
+              <p class="text-yellow-400 font-bold text-sm uppercase tracking-wide">Set Sate Ayam</p>
+              <p class="text-white text-lg font-bold">RM 8.50</p>
+            </div>
+            <div class="border border-yellow-500 rounded-xl p-4 text-center hover:bg-yellow-500/10 transition-all">
+              <p class="text-yellow-400 font-bold text-sm uppercase tracking-wide">Set Sate Daging</p>
+              <p class="text-white text-lg font-bold">RM 9.50</p>
+            </div>
+            <div class="border border-yellow-500 rounded-xl p-4 text-center hover:bg-yellow-500/10 transition-all">
+              <p class="text-yellow-400 font-bold text-sm uppercase tracking-wide">Set Sate Kambing</p>
+              <p class="text-white text-lg font-bold">RM 10.50</p>
+            </div>
+            <div class="border border-yellow-500 rounded-xl p-4 text-center hover:bg-yellow-500/10 transition-all">
+              <p class="text-yellow-400 font-bold text-sm uppercase tracking-wide">Set Mix</p>
+              <p class="text-yellow-300 text-xs">3pcs Ayam &amp; 3pcs Daging</p>
+              <p class="text-white text-lg font-bold">RM 10.50</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES & CATERING BANNER ========== -->
+  <section class="py-16 lg:py-24 bg-gray-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <!-- Left -->
+        <div class="space-y-6">
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-white leading-tight">
+            MENERIMA TEMPAHAN UNTUK <span class="text-yellow-400">SEMUA MAJLIS</span>
+          </h2>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <div class="flex items-center gap-3 text-gray-300 text-sm font-medium">
+              <i class="fas fa-ring text-yellow-400 text-lg"></i>
+              <span>Wedding Catering</span>
+            </div>
+            <div class="flex items-center gap-3 text-gray-300 text-sm font-medium">
+              <i class="fas fa-birthday-cake text-yellow-400 text-lg"></i>
+              <span>Birthday Party</span>
+            </div>
+            <div class="flex items-center gap-3 text-gray-300 text-sm font-medium">
+              <i class="fas fa-hand-holding-heart text-yellow-400 text-lg"></i>
+              <span>Infaq Service</span>
+            </div>
+
+            <div class="flex items-center gap-3 text-gray-300 text-sm font-medium">
+              <i class="fas fa-building text-yellow-400 text-lg"></i>
+              <span>Office Meeting</span>
+            </div>
+            <div class="flex items-center gap-3 text-gray-300 text-sm font-medium">
+              <i class="fas fa-user-friends text-yellow-400 text-lg"></i>
+              <span>Personal Catering</span>
+            </div>
+          </div>
+        </div>
+        <!-- Right: WhatsApp CTA Box -->
+        <div class="bg-gradient-to-br from-yellow-500/20 to-yellow-500/5 border border-yellow-500/30 rounded-2xl p-8 lg:p-10 text-center space-y-4">
+          <div class="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-yellow-500/20 text-yellow-400 text-3xl">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <h3 class="font-serif text-2xl sm:text-3xl text-yellow-400">SILA WHATSAPP KAMI</h3>
+          <a href="https://wa.me/60123873126" target="_blank" class="inline-block text-2xl sm:text-3xl font-bold text-white hover:text-yellow-400 transition-colors">
+            +6012 387 3126
+          </a>
+          <p class="text-gray-400 text-sm">Klik untuk terus berhubung dengan kami di WhatsApp</p>
+          <a href="https://wa.me/60123873126" target="_blank" class="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-6 py-3 rounded-xl transition-all mt-2">
+            <i class="fab fa-whatsapp"></i> WhatsApp Sekarang
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY SECTION ========== -->
+  <section id="gallery" class="py-16 lg:py-24 bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-white text-center mb-4">GALERI KAMI</h2>
+      <p class="text-gray-400 text-center mb-8">Moment terbaik bersama Sate Murni</p>
+
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10">
+        <button class="px-4 py-2 rounded-full text-sm font-medium bg-yellow-500 text-black">SEMUA</button>
+        <button class="px-4 py-2 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-yellow-500 hover:text-black transition-all">MAJLIS</button>
+        <button class="px-4 py-2 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-yellow-500 hover:text-black transition-all">KORPORAT</button>
+        <button class="px-4 py-2 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-yellow-500 hover:text-black transition-all">STALL</button>
+        <button class="px-4 py-2 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-yellow-500 hover:text-black transition-all">SIJIL</button>
+        <button class="px-4 py-2 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-yellow-500 hover:text-black transition-all">VIDEO REVIEW</button>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div class="relative group rounded-xl overflow-hidden">
+          <img src="https://placehold.co/300x200/333/FFF?text=Gallery+1" alt="Gallery" class="w-full h-44 object-cover" />
+          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <i class="fas fa-search-plus text-yellow-400 text-2xl"></i>
+          </div>
+        </div>
+        <div class="relative group rounded-xl overflow-hidden">
+          <img src="https://placehold.co/300x200/333/FFF?text=Gallery+2" alt="Gallery" class="w-full h-44 object-cover" />
+          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <i class="fas fa-search-plus text-yellow-400 text-2xl"></i>
+          </div>
+        </div>
+        <div class="relative group rounded-xl overflow-hidden">
+          <img src="https://placehold.co/300x200/333/FFF?text=Gallery+3" alt="Gallery" class="w-full h-44 object-cover" />
+          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <i class="fas fa-search-plus text-yellow-400 text-2xl"></i>
+          </div>
+        </div>
+        <div class="relative group rounded-xl overflow-hidden">
+          <img src="https://placehold.co/300x200/333/FFF?text=Gallery+4" alt="Gallery" class="w-full h-44 object-cover" />
+          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <i class="fas fa-play-circle text-yellow-400 text-3xl"></i>
+          </div>
+        </div>
+        <div class="relative group rounded-xl overflow-hidden">
+          <img src="https://placehold.co/300x200/333/FFF?text=Gallery+5" alt="Gallery" class="w-full h-44 object-cover" />
+          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <i class="fas fa-search-plus text-yellow-400 text-2xl"></i>
+          </div>
+        </div>
+        <div class="relative group rounded-xl overflow-hidden">
+          <img src="https://placehold.co/300x200/333/FFF?text=Gallery+6" alt="Gallery" class="w-full h-44 object-cover" />
+          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <i class="fas fa-search-plus text-yellow-400 text-2xl"></i>
+          </div>
+        </div>
+        <div class="relative group rounded-xl overflow-hidden">
+          <img src="https://placehold.co/300x200/333/FFF?text=Gallery+7" alt="Gallery" class="w-full h-44 object-cover" />
+          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <i class="fas fa-play-circle text-yellow-400 text-3xl"></i>
+          </div>
+        </div>
+        <div class="relative group rounded-xl overflow-hidden">
+          <img src="https://placehold.co/300x200/333/FFF?text=Gallery+8" alt="Gallery" class="w-full h-44 object-cover" />
+          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <i class="fas fa-search-plus text-yellow-400 text-2xl"></i>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <a href="#" class="inline-flex items-center gap-2 border border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black font-semibold px-6 py-3 rounded-xl transition-all">
+          <i class="fas fa-images"></i> LIHAT LEBIH BANYAK GALERI
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== VIDEO FEEDBACK SECTION ========== -->
+  <section id="review" class="py-16 lg:py-24 bg-gray-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-white text-center mb-12">VIDEO FEEDBACK PELANGGAN</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="relative group rounded-xl overflow-hidden">
+          <img src="https://placehold.co/300x400/333/FFF?text=Video+1" alt="Video" class="w-full h-64 object-cover" />
+          <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <i class="fas fa-play-circle text-yellow-400 text-5xl drop-shadow-lg group-hover:scale-110 transition-transform"></i>
+          </div>
+        </div>
+        <div class="relative group rounded-xl overflow-hidden">
+          <img src="https://placehold.co/300x400/333/FFF?text=Video+2" alt="Video" class="w-full h-64 object-cover" />
+          <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <i class="fas fa-play-circle text-yellow-400 text-5xl drop-shadow-lg group-hover:scale-110 transition-transform"></i>
+          </div>
+        </div>
+        <div class="relative group rounded-xl overflow-hidden">
+          <img src="https://placehold.co/300x400/333/FFF?text=Video+3" alt="Video" class="w-full h-64 object-cover" />
+          <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <i class="fas fa-play-circle text-yellow-400 text-5xl drop-shadow-lg group-hover:scale-110 transition-transform"></i>
+          </div>
+        </div>
+        <div class="relative group rounded-xl overflow-hidden">
+          <img src="https://placehold.co/300x400/333/FFF?text=Video+4" alt="Video" class="w-full h-64 object-cover" />
+          <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <i class="fas fa-play-circle text-yellow-400 text-5xl drop-shadow-lg group-hover:scale-110 transition-transform"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer id="contact" class="bg-gray-950 border-t border-yellow-500/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-16">
+        <!-- Column 1: Hubungi Kami -->
+        <div class="space-y-4">
+          <h4 class="font-serif text-xl text-yellow-400 font-bold">Hubungi Kami</h4>
+          <div class="space-y-3 text-gray-400 text-sm">
+            <p class="flex items-center gap-3">
+              <i class="fas fa-phone text-yellow-400 w-4"></i>
+              <a href="tel:+60123873126" class="hover:text-yellow-400 transition-colors">+6012 387 3126</a>
+            </p>
+            <p class="flex items-center gap-3">
+              <i class="fas fa-envelope text-yellow-400 w-4"></i>
+              <a href="mailto:ricoherman@yahoo.com" class="hover:text-yellow-400 transition-colors">ricoherman@yahoo.com</a>
+            </p>
+          </div>
+          <div class="flex gap-3 pt-2">
+            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:bg-yellow-500 hover:text-black transition-all"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:bg-yellow-500 hover:text-black transition-all"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/60123873126" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:bg-yellow-500 hover:text-black transition-all"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:bg-yellow-500 hover:text-black transition-all"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Alamat -->
+        <div class="space-y-4">
+          <h4 class="font-serif text-xl text-yellow-400 font-bold">Alamat</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            <i class="fas fa-map-marker-alt text-yellow-400 mr-2"></i>
+            A-0-5, Teratak Muhibbah 1, Taman Desa, Jalan Klang Lama, 58100 Kuala Lumpur
+          </p>
+          <a href="https://maps.google.com/?q=Teratak+Muhibbah+1+Taman+Desa+Kuala+Lumpur" target="_blank" class="inline-flex items-center gap-2 text-yellow-400 hover:text-yellow-300 text-sm font-medium transition-colors">
+            <i class="fas fa-map"></i> Buka di Google Maps
+          </a>
+        </div>
+
+        <!-- Column 3: Lokasi Stall -->
+        <div class="space-y-4">
+          <h4 class="font-serif text-xl text-yellow-400 font-bold">Lokasi Stall</h4>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li class="flex items-center gap-2"><i class="fas fa-store text-yellow-400 text-xs"></i> Restoran Al Sarifa</li>
+            <li class="flex items-center gap-2"><i class="fas fa-store text-yellow-400 text-xs"></i> Restoran Hj Basheer</li>
+            <li class="flex items-center gap-2"><i class="fas fa-store text-yellow-400 text-xs"></i> Restoran Abadi</li>
+            <li class="flex items-center gap-2"><i class="fas fa-store text-yellow-400 text-xs"></i> Mafa Corner</li>
+            <li class="flex items-center gap-2"><i class="fas fa-store text-yellow-400 text-xs"></i> Laopai Kopitiam</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Bottom Bar -->
+    <div class="border-t border-yellow-500/10 py-4">
+      <p class="text-center text-gray-500 text-xs">
+        &copy; 2026 Sate Murni. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ========== FLOATING WHATSAPP BUTTON ========== -->
+  <a href="https://wa.me/60123873126" target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 flex items-center justify-center rounded-full bg-green-500 text-white text-2xl shadow-lg hover:bg-green-400 transition-all hover:scale-110 shadow-green-500/30">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- ========== MOBILE MENU TOGGLE ========== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var btn = document.getElementById('mobile-menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      if (btn && menu) {
+        btn.addEventListener('click', function() {
+          menu.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
