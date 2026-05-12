@@ -653,9 +653,10 @@
     document.body.appendChild(lightbox);
     var lbImg = lightbox.querySelector('img');
     var lbClose = lightbox.querySelector('button');
-    lightbox.addEventListener('click', function(e) { if (e.target === lightbox) lightbox.classList.add('hidden'); });
-    lbClose.addEventListener('click', function() { lightbox.classList.add('hidden'); });
+    lightbox.addEventListener('click', function(e) { if (e.target === lightbox) { lightbox.classList.add('hidden'); lightbox.style.display = ''; } });
+    lbClose.addEventListener('click', function() { lightbox.classList.add('hidden'); lightbox.style.display = ''; });
     galleryImgs.forEach(function(img) {
+      img.style.cursor = 'pointer';
       img.addEventListener('click', function() {
         lbImg.src = this.src;
         lightbox.classList.remove('hidden');
