@@ -603,28 +603,6 @@
       toggleBtns.forEach(function(b) { b.addEventListener('click', toggleLang); });
       setLang(saved);
 
-      var videoCards = document.querySelectorAll('#review .relative.group');
-      videoCards.forEach(function(card) {
-        var video = card.querySelector('video');
-        var overlay = card.querySelector('.absolute');
-        if (!video || !overlay) return;
-        card.addEventListener('click', function() {
-          if (video.paused) {
-            video.play();
-            overlay.style.display = 'none';
-          } else {
-            video.pause();
-            overlay.style.display = 'flex';
-          }
-        });
-        video.addEventListener('pause', function() {
-          overlay.style.display = 'flex';
-        });
-        video.addEventListener('ended', function() {
-          overlay.style.display = 'flex';
-        });
-      });
-
       var viewMoreBtn = document.getElementById('view-more-video');
       if (viewMoreBtn) {
         viewMoreBtn.addEventListener('click', function() {
@@ -646,23 +624,48 @@
       }
     });
 
-    var galleryImgs = document.querySelectorAll('#gallery img');
-    var lightbox = document.createElement('div');
-    lightbox.className = 'fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4';
-    lightbox.innerHTML = '<button class="absolute top-4 right-4 text-white text-4xl hover:text-yellow-400 transition-colors">&times;</button><img class="max-w-full max-h-full object-contain rounded-xl" />';
-    document.body.appendChild(lightbox);
-    var lbImg = lightbox.querySelector('img');
-    var lbClose = lightbox.querySelector('button');
-    lightbox.addEventListener('click', function(e) { if (e.target === lightbox) { lightbox.classList.add('hidden'); lightbox.style.display = ''; } });
-    lbClose.addEventListener('click', function() { lightbox.classList.add('hidden'); lightbox.style.display = ''; });
-    galleryImgs.forEach(function(img) {
-      img.style.cursor = 'pointer';
-      img.addEventListener('click', function() {
-        lbImg.src = this.src;
-        lightbox.classList.remove('hidden');
-        lightbox.style.display = 'flex';
+    var lbOverlay = document.getElementById('lightbox');
+    var lbContent = document.getElementById('lightbox-content');
+    var lbClose = document.getElementById('lightbox-close');
+
+    function openLightbox(html) {
+      lbContent.innerHTML = html;
+      lbOverlay.classList.remove('hidden');
+      lbOverlay.style.display = 'flex';
+    }
+    function closeLightbox() {
+      lbContent.innerHTML = '';
+      lbOverlay.classList.add('hidden');
+      lbOverlay.style.display = '';
+    }
+
+    document.querySelectorAll('#gallery .group').forEach(function(card) {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', function() {
+        var img = this.querySelector('img');
+        if (img) openLightbox('<img src="' + img.src + '" class="max-w-full max-h-full object-contain rounded-xl" />');
       });
     });
+
+    document.querySelectorAll('#review .group').forEach(function(card) {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', function(e) {
+        var video = this.querySelector('video');
+        if (video) {
+          var src = video.querySelector('source') ? video.querySelector('source').src : video.src;
+          openLightbox('<video src="' + src + '" class="max-w-full max-h-full object-contain rounded-xl" controls autoplay playsinline></video>');
+        }
+      });
+    });
+
+    lbOverlay.addEventListener('click', function(e) { if (e.target === lbOverlay) closeLightbox(); });
+    lbClose.addEventListener('click', closeLightbox);
   </script>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4">
+    <button id="lightbox-close" class="absolute top-4 right-4 z-10 w-12 h-12 flex items-center justify-center text-white text-4xl hover:text-yellow-400 transition-colors">&times;</button>
+    <div id="lightbox-content" class="flex items-center justify-center"></div>
+  </div>
 </body>
 </html>
