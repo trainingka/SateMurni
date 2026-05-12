@@ -200,7 +200,7 @@
       </div>
       <div class="flex justify-center">
         <div class="max-w-5xl w-full">
-          <img src="images/MenuUtama3.png" alt="Menu Sate Murni" class="w-full block" />
+          <img src="images/MenuUtama3.png" alt="Menu Sate Murni" class="w-full block" style="cursor:pointer" id="menu-image" />
         </div>
       </div>
     </div>
@@ -637,6 +637,13 @@
           if (img) openLB('<img src="' + img.src + '" style="max-width:85vw;max-height:80vh;width:auto;height:auto;object-fit:contain;border-radius:12px;" />');
         });
       });
+
+      var menuImg = document.getElementById('menu-image');
+      if (menuImg) {
+        menuImg.addEventListener('click', function() {
+          openLB('<img src="' + this.src + '" style="max-width:85vw;max-height:80vh;width:auto;height:auto;object-fit:contain;border-radius:12px;" />');
+        });
+      }
 
       document.querySelectorAll('#review .group').forEach(function(card) {
         card.style.cursor = 'pointer';
