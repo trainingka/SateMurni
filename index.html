@@ -359,30 +359,35 @@
             <i class="fas fa-play-circle text-yellow-400 text-5xl drop-shadow-lg group-hover:scale-110 transition-transform"></i>
           </div>
         </div>
-        <div class="relative group rounded-xl overflow-hidden bg-gray-900">
+        <div class="relative group rounded-xl overflow-hidden bg-gray-900 hidden more-video">
           <video src="VideoFeedback/video5.mp4" class="w-full aspect-[3/4] object-cover" playsinline preload="metadata"></video>
           <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
             <i class="fas fa-play-circle text-yellow-400 text-5xl drop-shadow-lg group-hover:scale-110 transition-transform"></i>
           </div>
         </div>
-        <div class="relative group rounded-xl overflow-hidden bg-gray-900">
+        <div class="relative group rounded-xl overflow-hidden bg-gray-900 hidden more-video">
           <video src="VideoFeedback/video6.mp4" class="w-full aspect-[3/4] object-cover" playsinline preload="metadata"></video>
           <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
             <i class="fas fa-play-circle text-yellow-400 text-5xl drop-shadow-lg group-hover:scale-110 transition-transform"></i>
           </div>
         </div>
-        <div class="relative group rounded-xl overflow-hidden bg-gray-900">
+        <div class="relative group rounded-xl overflow-hidden bg-gray-900 hidden more-video">
           <video src="VideoFeedback/video7.mp4" class="w-full aspect-[3/4] object-cover" playsinline preload="metadata"></video>
           <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
             <i class="fas fa-play-circle text-yellow-400 text-5xl drop-shadow-lg group-hover:scale-110 transition-transform"></i>
           </div>
         </div>
-        <div class="relative group rounded-xl overflow-hidden bg-gray-900">
+        <div class="relative group rounded-xl overflow-hidden bg-gray-900 hidden more-video">
           <video src="VideoFeedback/video8.mp4" class="w-full aspect-[3/4] object-cover" playsinline preload="metadata"></video>
           <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
             <i class="fas fa-play-circle text-yellow-400 text-5xl drop-shadow-lg group-hover:scale-110 transition-transform"></i>
           </div>
         </div>
+      </div>
+      <div class="text-center mt-8">
+        <button id="view-more-video" class="inline-flex items-center gap-2 border border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black font-semibold px-6 py-3 rounded-xl transition-all">
+          <i class="fas fa-video"></i> <span>LIHAT LEBIH BANYAK VIDEO</span>
+        </button>
       </div>
     </div>
   </section>
@@ -584,6 +589,16 @@
           overlay.style.display = 'flex';
         });
       });
+
+      var viewMoreBtn = document.getElementById('view-more-video');
+      if (viewMoreBtn) {
+        viewMoreBtn.addEventListener('click', function() {
+          var hidden = document.querySelectorAll('#review .more-video');
+          var isHidden = hidden[0].classList.contains('hidden');
+          hidden.forEach(function(el) { el.classList.toggle('hidden'); });
+          viewMoreBtn.querySelector('span').textContent = isHidden ? 'TUNJUKKAN KURANG' : 'LIHAT LEBIH BANYAK VIDEO';
+        });
+      }
     });
   </script>
 </body>
