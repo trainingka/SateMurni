@@ -11,6 +11,7 @@
   <style>
     body { font-family: 'Inter', sans-serif; }
     .font-serif { font-family: 'Playfair Display', serif; }
+    video { background: #1a1a1a; }
   </style>
 </head>
 <body class="bg-black text-white">
@@ -676,6 +677,41 @@
 
       lb.addEventListener('click', function(e) { if (e.target === lb) closeLB(); });
       lbClose.addEventListener('click', closeLB);
+
+      // iOS Safari: generate video poster from first frame
+      function genPoster(v) {
+        if (v.dataset.posterFixed) return;
+        function cap() {
+          if (v.videoWidth && v.videoHeight) {
+            v.currentTime = 0.3;
+            var to = setTimeout(function() { v.dataset.posterFixed = '1'; }, 3000);
+            v.addEventListener('seeked', function sk() {
+              clearTimeout(to);
+              v.removeEventListener('seeked', sk);
+              try {
+                var c = document.createElement('canvas');
+                c.width = v.videoWidth;
+                c.height = v.videoHeight;
+                c.getContext('2d').drawImage(v, 0, 0);
+                v.poster = c.toDataURL('image/jpeg', 0.4);
+              } catch (e) {}
+              v.dataset.posterFixed = '1';
+            });
+          } else { v.addEventListener('loadedmetadata', cap); }
+        }
+        if (v.readyState >= 2) cap();
+        else v.addEventListener('loadeddata', cap);
+      }
+      document.querySelectorAll('#review .group video').forEach(genPoster);
+      // Re-run for newly visible videos after view-more toggles
+      var _vm = document.getElementById('view-more-video');
+      if (_vm) {
+        _vm.addEventListener('click', function() {
+          setTimeout(function() {
+            document.querySelectorAll('#review .group video[data-poster-fixed!="1"]').forEach(genPoster);
+          }, 200);
+        });
+      }
     });
   </script>
 
