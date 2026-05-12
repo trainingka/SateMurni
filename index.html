@@ -346,55 +346,55 @@
       </div>
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
         <div class="relative group rounded-xl overflow-hidden bg-gray-900">
-          <video src="VideoFeedback/video9.mp4#t=0.5" class="w-full aspect-[3/4] object-cover" playsinline preload="metadata" muted></video>
+          <video src="VideoFeedback/video9.mp4" class="w-full aspect-[3/4] object-cover" playsinline preload="metadata" muted></video>
           <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
             <i class="fas fa-play-circle text-yellow-400 text-5xl drop-shadow-lg group-hover:scale-110 transition-transform"></i>
           </div>
         </div>
         <div class="relative group rounded-xl overflow-hidden bg-gray-900">
-          <video src="VideoFeedback/video8.mp4#t=0.5" class="w-full aspect-[3/4] object-cover" playsinline preload="metadata" muted></video>
+          <video src="VideoFeedback/video8.mp4" class="w-full aspect-[3/4] object-cover" playsinline preload="metadata" muted></video>
           <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
             <i class="fas fa-play-circle text-yellow-400 text-5xl drop-shadow-lg group-hover:scale-110 transition-transform"></i>
           </div>
         </div>
         <div class="relative group rounded-xl overflow-hidden bg-gray-900">
-          <video src="VideoFeedback/video3.mp4#t=0.5" class="w-full aspect-[3/4] object-cover" playsinline preload="metadata" muted></video>
+          <video src="VideoFeedback/video3.mp4" class="w-full aspect-[3/4] object-cover" playsinline preload="metadata" muted></video>
           <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
             <i class="fas fa-play-circle text-yellow-400 text-5xl drop-shadow-lg group-hover:scale-110 transition-transform"></i>
           </div>
         </div>
         <div class="relative group rounded-xl overflow-hidden bg-gray-900">
-          <video src="VideoFeedback/video4.mp4#t=0.5" class="w-full aspect-[3/4] object-cover" playsinline preload="metadata" muted></video>
+          <video src="VideoFeedback/video4.mp4" class="w-full aspect-[3/4] object-cover" playsinline preload="metadata" muted></video>
           <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
             <i class="fas fa-play-circle text-yellow-400 text-5xl drop-shadow-lg group-hover:scale-110 transition-transform"></i>
           </div>
         </div>
         <div class="relative group rounded-xl overflow-hidden bg-gray-900 hidden more-video">
-          <video src="VideoFeedback/video5.mp4#t=0.5" class="w-full aspect-[3/4] object-cover" playsinline preload="metadata" muted></video>
+          <video src="VideoFeedback/video5.mp4" class="w-full aspect-[3/4] object-cover" playsinline preload="metadata" muted></video>
           <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
             <i class="fas fa-play-circle text-yellow-400 text-5xl drop-shadow-lg group-hover:scale-110 transition-transform"></i>
           </div>
         </div>
         <div class="relative group rounded-xl overflow-hidden bg-gray-900 hidden more-video">
-          <video src="VideoFeedback/video6.mp4#t=0.5" class="w-full aspect-[3/4] object-cover" playsinline preload="metadata" muted></video>
+          <video src="VideoFeedback/video6.mp4" class="w-full aspect-[3/4] object-cover" playsinline preload="metadata" muted></video>
           <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
             <i class="fas fa-play-circle text-yellow-400 text-5xl drop-shadow-lg group-hover:scale-110 transition-transform"></i>
           </div>
         </div>
         <div class="relative group rounded-xl overflow-hidden bg-gray-900 hidden more-video">
-          <video src="VideoFeedback/video7.mp4#t=0.5" class="w-full aspect-[3/4] object-cover" playsinline preload="metadata" muted></video>
+          <video src="VideoFeedback/video7.mp4" class="w-full aspect-[3/4] object-cover" playsinline preload="metadata" muted></video>
           <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
             <i class="fas fa-play-circle text-yellow-400 text-5xl drop-shadow-lg group-hover:scale-110 transition-transform"></i>
           </div>
         </div>
         <div class="relative group rounded-xl overflow-hidden bg-gray-900 hidden more-video">
-          <video src="VideoFeedback/video2.mp4#t=0.5" class="w-full aspect-[3/4] object-cover" playsinline preload="metadata" muted></video>
+          <video src="VideoFeedback/video2.mp4" class="w-full aspect-[3/4] object-cover" playsinline preload="metadata" muted></video>
           <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
             <i class="fas fa-play-circle text-yellow-400 text-5xl drop-shadow-lg group-hover:scale-110 transition-transform"></i>
           </div>
         </div>
         <div class="relative group rounded-xl overflow-hidden bg-gray-900 hidden more-video">
-          <video src="VideoFeedback/video1.mp4#t=0.5" class="w-full aspect-[3/4] object-cover" playsinline preload="metadata" muted></video>
+          <video src="VideoFeedback/video1.mp4" class="w-full aspect-[3/4] object-cover" playsinline preload="metadata" muted></video>
           <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
             <i class="fas fa-play-circle text-yellow-400 text-5xl drop-shadow-lg group-hover:scale-110 transition-transform"></i>
           </div>
@@ -678,7 +678,7 @@
       lb.addEventListener('click', function(e) { if (e.target === lb) closeLB(); });
       lbClose.addEventListener('click', closeLB);
 
-      // iOS Safari: force video to render first frame via muted playback (seeks to 0.5s from #t=0.5 in src, but play/pause ensures frame is decoded)
+      // iOS Safari: play muted then pause to force frame render, then capture poster
       function fixThumbs() {
         document.querySelectorAll('#review .group video').forEach(function(v) {
           if (v.dataset.thumbFixed) return;
@@ -686,7 +686,19 @@
           var doFix = function() {
             if (v.dataset.thumbFixed) return;
             v.play().then(function() {
-              setTimeout(function() { v.pause(); v.currentTime = 0; v.dataset.thumbFixed = '1'; }, 150);
+              v.currentTime = 0.3;
+              setTimeout(function() {
+                try {
+                  var c = document.createElement('canvas');
+                  c.width = v.videoWidth || 320;
+                  c.height = v.videoHeight || 426;
+                  c.getContext('2d').drawImage(v, 0, 0);
+                  v.poster = c.toDataURL('image/jpeg', 0.4);
+                } catch(e) {}
+                v.pause();
+                v.currentTime = 0;
+                v.dataset.thumbFixed = '1';
+              }, 200);
             }).catch(function() { v.dataset.thumbFixed = '1'; });
           };
           if (v.readyState >= 2) doFix();
@@ -695,7 +707,7 @@
       }
       fixThumbs();
       document.getElementById('view-more-video')?.addEventListener('click', function() {
-        setTimeout(fixThumbs, 300);
+        setTimeout(fixThumbs, 400);
       });
     });
   </script>
