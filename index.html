@@ -622,50 +622,50 @@
           galleryBtn.querySelector('span').textContent = isHidden ? 'TUNJUKKAN KURANG' : 'LIHAT LEBIH BANYAK GALERI';
         });
       }
-    });
 
-    var lbOverlay = document.getElementById('lightbox');
-    var lbContent = document.getElementById('lightbox-content');
-    var lbClose = document.getElementById('lightbox-close');
+      var lb = document.getElementById('lightbox');
+      var lbContent = document.getElementById('lightbox-content');
+      var lbClose = document.getElementById('lightbox-close');
 
-    function openLightbox(html) {
-      lbContent.innerHTML = html;
-      lbOverlay.classList.remove('hidden');
-      lbOverlay.style.display = 'flex';
-    }
-    function closeLightbox() {
-      lbContent.innerHTML = '';
-      lbOverlay.classList.add('hidden');
-      lbOverlay.style.display = '';
-    }
+      function openLB(html) {
+        lbContent.innerHTML = html;
+        lb.style.display = 'flex';
+      }
+      function closeLB() {
+        var existing = lbContent.querySelector('video');
+        if (existing) { existing.pause(); existing.src = ''; }
+        lbContent.innerHTML = '';
+        lb.style.display = 'none';
+      }
 
-    document.querySelectorAll('#gallery .group').forEach(function(card) {
-      card.style.cursor = 'pointer';
-      card.addEventListener('click', function() {
-        var img = this.querySelector('img');
-        if (img) openLightbox('<img src="' + img.src + '" class="max-w-full max-h-full object-contain rounded-xl" />');
+      document.querySelectorAll('#gallery .group').forEach(function(card) {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', function() {
+          var img = this.querySelector('img');
+          if (img) openLB('<img src="' + img.src + '" class="max-w-full max-h-full object-contain rounded-xl" />');
+        });
       });
-    });
 
-    document.querySelectorAll('#review .group').forEach(function(card) {
-      card.style.cursor = 'pointer';
-      card.addEventListener('click', function(e) {
-        var video = this.querySelector('video');
-        if (video) {
-          var src = video.querySelector('source') ? video.querySelector('source').src : video.src;
-          openLightbox('<video src="' + src + '" class="max-w-full max-h-full object-contain rounded-xl" controls autoplay playsinline></video>');
-        }
+      document.querySelectorAll('#review .group').forEach(function(card) {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', function() {
+          var v = this.querySelector('video');
+          if (v) {
+            var s = v.currentSrc || v.src;
+            openLB('<video src="' + s + '" class="max-w-full max-h-full object-contain rounded-xl" controls autoplay playsinline></video>');
+          }
+        });
       });
-    });
 
-    lbOverlay.addEventListener('click', function(e) { if (e.target === lbOverlay) closeLightbox(); });
-    lbClose.addEventListener('click', closeLightbox);
+      lb.addEventListener('click', function(e) { if (e.target === lb) closeLB(); });
+      lbClose.addEventListener('click', closeLB);
+    });
   </script>
 
   <!-- Lightbox -->
-  <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4">
-    <button id="lightbox-close" class="absolute top-4 right-4 z-10 w-12 h-12 flex items-center justify-center text-white text-4xl hover:text-yellow-400 transition-colors">&times;</button>
-    <div id="lightbox-content" class="flex items-center justify-center"></div>
+  <div id="lightbox" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.9);align-items:center;justify-content:center;padding:16px;">
+    <button id="lightbox-close" style="position:absolute;top:16px;right:16px;z-index:10;width:48px;height:48px;display:flex;align-items:center;justify-content:center;color:white;font-size:40px;background:none;border:none;cursor:pointer;">&times;</button>
+    <div id="lightbox-content" style="display:flex;align-items:center;justify-content:center;"></div>
   </div>
 </body>
 </html>
