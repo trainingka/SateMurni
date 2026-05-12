@@ -642,7 +642,7 @@
         card.style.cursor = 'pointer';
         card.addEventListener('click', function() {
           var img = this.querySelector('img');
-          if (img) openLB('<img src="' + img.src + '" class="max-w-full max-h-full object-contain rounded-xl" />');
+          if (img) openLB('<img src="' + img.src + '" style="max-width:85vw;max-height:80vh;width:auto;height:auto;object-fit:contain;border-radius:12px;" />');
         });
       });
 
@@ -652,7 +652,7 @@
           var v = this.querySelector('video');
           if (v) {
             var s = v.currentSrc || v.src;
-            openLB('<video src="' + s + '" class="max-w-full max-h-full object-contain rounded-xl" controls autoplay playsinline></video>');
+            openLB('<video src="' + s + '" style="max-width:85vw;max-height:80vh;width:auto;height:auto;object-fit:contain;border-radius:12px;" controls autoplay playsinline></video>');
           }
         });
       });
