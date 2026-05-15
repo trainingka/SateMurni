@@ -7,6 +7,7 @@
   <script>if(!window.__tw){window.__tw=!0;const w=console.warn;console.warn=function(m){if(typeof m==='string'&&m.includes('tailwindcss.com'))return;w.apply(console,arguments)}}</script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>.nav-link.active{color:#eab308!important}</style>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet" />
   <style>
     body { font-family: 'Inter', sans-serif; }
@@ -30,12 +31,12 @@
 
         <!-- Right: Nav Links (desktop) -->
         <div class="hidden lg:flex items-center gap-6 ml-auto">
-          <a href="#home" class="text-xs font-bold tracking-widest text-yellow-500 transition-colors" data-i18n="nav.home">HOME</a>
-          <a href="#about" class="text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors" data-i18n="nav.about">ABOUT</a>
-          <a href="#service" class="text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors" data-i18n="nav.service">SERVICE</a>
-          <a href="#gallery" class="text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors" data-i18n="nav.gallery">GALLERY</a>
-          <a href="#review" class="text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors" data-i18n="nav.review">REVIEW</a>
-          <a href="#contact" class="text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors" data-i18n="nav.contact">CONTACT</a>
+          <a href="#home" class="nav-link text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors" data-i18n="nav.home">HOME</a>
+          <a href="#about" class="nav-link text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors" data-i18n="nav.about">ABOUT</a>
+          <a href="#service" class="nav-link text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors" data-i18n="nav.service">SERVICE</a>
+          <a href="#gallery" class="nav-link text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors" data-i18n="nav.gallery">GALLERY</a>
+          <a href="#review" class="nav-link text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors" data-i18n="nav.review">REVIEW</a>
+          <a href="#contact" class="nav-link text-xs font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors" data-i18n="nav.contact">CONTACT</a>
           <button id="lang-toggle" class="bg-yellow-500 hover:bg-yellow-400 text-black font-bold text-xs px-3 py-1.5 rounded-full transition shadow-md flex items-center gap-1">
             <span id="lang-label">EN</span>
             <i class="fas fa-globe text-xs"></i>
@@ -51,12 +52,12 @@
     <!-- Mobile Nav -->
     <div id="mobile-menu" class="hidden lg:hidden bg-[#0a0a0a]/95 border-t border-gray-800">
       <div class="px-4 py-4 space-y-3">
-        <a href="#home" class="block text-sm font-bold tracking-widest text-yellow-500 transition-colors py-2" data-i18n="nav.home">HOME</a>
-        <a href="#about" class="block text-sm font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors py-2" data-i18n="nav.about">ABOUT</a>
-        <a href="#service" class="block text-sm font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors py-2" data-i18n="nav.service">SERVICE</a>
-        <a href="#gallery" class="block text-sm font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors py-2" data-i18n="nav.gallery">GALLERY</a>
-        <a href="#review" class="block text-sm font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors py-2" data-i18n="nav.review">REVIEW</a>
-        <a href="#contact" class="block text-sm font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors py-2" data-i18n="nav.contact">CONTACT</a>
+        <a href="#home" class="nav-link block text-sm font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors py-2" data-i18n="nav.home">HOME</a>
+        <a href="#about" class="nav-link block text-sm font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors py-2" data-i18n="nav.about">ABOUT</a>
+        <a href="#service" class="nav-link block text-sm font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors py-2" data-i18n="nav.service">SERVICE</a>
+        <a href="#gallery" class="nav-link block text-sm font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors py-2" data-i18n="nav.gallery">GALLERY</a>
+        <a href="#review" class="nav-link block text-sm font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors py-2" data-i18n="nav.review">REVIEW</a>
+        <a href="#contact" class="nav-link block text-sm font-bold tracking-widest text-gray-300 hover:text-yellow-500 transition-colors py-2" data-i18n="nav.contact">CONTACT</a>
         <button id="lang-toggle-mobile" class="bg-yellow-500 hover:bg-yellow-400 text-black font-bold text-xs px-3 py-1.5 rounded-full transition shadow-md flex items-center gap-1">
           <span id="lang-label-mobile">EN</span>
           <i class="fas fa-globe text-xs"></i>
@@ -730,6 +731,20 @@
           galleryBtn.setAttribute('data-expanded', isHidden ? '1' : '0');
         });
       }
+
+      var sections = document.querySelectorAll('section[id]');
+      var navLinks = document.querySelectorAll('.nav-link');
+      function updateNav() {
+        var current = '';
+        sections.forEach(function(s) {
+          if (s.getBoundingClientRect().top <= 200) current = s.id;
+        });
+        navLinks.forEach(function(a) {
+          a.classList.toggle('active', a.getAttribute('href').slice(1) === current);
+        });
+      }
+      updateNav();
+      document.addEventListener('scroll', updateNav, { passive: true });
 
       var lb = document.getElementById('lightbox');
       var lbContent = document.getElementById('lightbox-content');
